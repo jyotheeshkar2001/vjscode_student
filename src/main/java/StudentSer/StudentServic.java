@@ -18,5 +18,13 @@ public class StudentServic {
 	public List<Students> userinfo() throws SQLException {
 		return sr.getUser();
 	}
+	
+	public String insertUser(List<Students> student) throws SQLException {
+		
+		return sr.InsertStudent(student);
+	}
+
+	
+	
 
 }

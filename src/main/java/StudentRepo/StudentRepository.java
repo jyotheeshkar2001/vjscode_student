@@ -1,6 +1,7 @@
 package StudentRepo;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -38,6 +39,20 @@ public class StudentRepository {
 		}
 
 		return list;
+	}
+	
+	public String InsertStudent(List<Students> sts) throws SQLException {
+		
+		String sql="insert into student (id,name,place) values(?,?,?)";
+		Connection con = datasource.getConnection();
+		PreparedStatement st = con.prepareStatement(sql);
+		for(Students s: sts) {
+			st.setInt(1, s.getId());
+			st.setString(2,s.getName());
+			st.setString(3,s.getPlace());
+			 st.executeUpdate();
+		}
+		return "Insert done";
 	}
 
 }
