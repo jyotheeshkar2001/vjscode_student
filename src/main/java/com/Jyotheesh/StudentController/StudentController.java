@@ -50,4 +50,13 @@ public class StudentController {
 	public String getUserInfo() {
 		return"jyotheesh";
 	}
+	
+	/*
+	 * Added new feature
+	 */
+	
+	@GetMapping("/getUserInfos")
+	public String getUserInfo1() {
+		return"jagan";
+	}
 }
