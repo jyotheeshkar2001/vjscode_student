@@ -33,7 +33,7 @@ public class StudentController {
 	
 	/*
 	 * Insert Student values to the database
-	 * 
+	 * Insert values to the database
 	 * 
 	 */
 	
