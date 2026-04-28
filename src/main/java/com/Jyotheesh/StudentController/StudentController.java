@@ -34,6 +34,7 @@ public class StudentController {
 	/*
 	 * Insert Student values to the database
 	 * 
+	 * 
 	 */
 	
 	@PostMapping("/inserinformation")
@@ -43,5 +44,10 @@ public class StudentController {
 			return ss.insertUser(st);
 			
 		
+	}
+	
+	@GetMapping("/getUserInfo")
+	public String getUserInfo() {
+		return"jyotheesh";
 	}
 }
