@@ -52,7 +52,7 @@ public class StudentRepository {
 			st.setString(3,s.getPlace());
 			 st.executeUpdate();
 		}
-		return "Insert done successfully";
+		return "Insert done successfully by jyotheesh";
 	}
 
 }
